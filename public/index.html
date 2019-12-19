@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <title>塞尔达传说-地图</title>
+</head>
+
+<body>
+  <div id="TypeSwitch">
+    <strong>类型筛选</strong>
+    <ul></ul>
+  </div>
+  <div id="NameSearch">
+    <input id="KeyWords" type="text" value="" placeholder="搜索" />
+    <span id="ClearKeyword" class="clear">清除</span>
+  </div>
+  <div id="MapContainer">
+  </div>
+  <script>
+    const { shell } = window.require('electron');
+    console.log(shell)
+    function openDefaultBrowser(url) {
+      shell.openExternal(url)
+    }
+  </script>
+</body>
+
+</html>

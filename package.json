@@ -1,0 +1,49 @@
+{
+  "name": "basemap",
+  "version": "1.0.0",
+  "description": "this is a fork",
+  "main": "main.js",
+  "scripts": {
+    "dev": "concurrently \"wait-on http://localhost:8100 && electron .\" \"cross-env BROWSER=none npm start\"",
+    "start": "webpack-dev-server",
+    "build": "webpack --config webpack.config.js",
+    "pack": "electron-builder --dir",
+    "prepack": "npm run build",
+    "dist": "electron-builder"
+  },
+  "author": "Achieve",
+  "license": "ISC",
+  "homepage": "./",
+  "build": {
+    "electronDownload": {
+      "mirror": "https://npm.taobao.org/mirrors/electron/"
+    },
+    "appId": "zerlda",
+    "productName": "海拉鲁大冒险",
+    "copyright": "Copyright © 2019",
+    "files": [
+      "build/**/*",
+      "package.json",
+      "preload.js",
+      "main.js"
+    ],
+    "extends": null
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.0.2",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.4.0",
+    "electron": "^7.1.5",
+    "electron-builder": "^21.2.0",
+    "electron-is-dev": "^1.1.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.2",
+    "wait-on": "^3.3.0",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {}
+}
