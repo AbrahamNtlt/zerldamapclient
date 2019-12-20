@@ -8,7 +8,6 @@
     "start": "webpack-dev-server",
     "build": "webpack --config webpack.config.js",
     "pack": "electron-builder --dir",
-    "prepack": "npm run build",
     "dist": "electron-builder"
   },
   "author": "Achieve",
@@ -28,7 +27,47 @@
       "static/**/*",
       "main.js"
     ],
-    "extends": null
+    "extends": null,
+    "mac": {
+      "category": "public.app-category.productivity",
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "dmg": {
+      "background": "static/appdmg.png",
+      "icon": "static/icon.icns",
+      "iconSize": 80,
+      "contents": [
+        {
+          "x": 380,
+          "y": 280,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 110,
+          "y": 280,
+          "type": "file"
+        }
+      ],
+      "window": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "win": {
+      "target": [
+        "msi",
+        "nsis"
+      ],
+      "icon": "static/icon.ico",
+      "artifactName": "${productName}-Web-Setup-${version}.${ext}",
+      "publisherName": "Achieve"
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false,
+      "perMachine": false
+    }
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
