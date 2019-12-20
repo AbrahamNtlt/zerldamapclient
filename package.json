@@ -25,6 +25,7 @@
       "build/**/*",
       "package.json",
       "preload.js",
+      "static/**/*",
       "main.js"
     ],
     "extends": null

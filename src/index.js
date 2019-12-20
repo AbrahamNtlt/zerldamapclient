@@ -35,7 +35,7 @@ $(function() {
     maxBoundsViscosity: 1.0
   }).setView([0, 0], 2)
 
-  var layer = L.tileLayer('http://map.wuyuhao.top/{z}_{x}_{y}.png', {
+  var layer = L.tileLayer('../static/Map/{z}_{x}_{y}.png', {
     attribution: '&copy; David',
     minZoom: 2,
     maxZoom: 7,
