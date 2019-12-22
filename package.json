@@ -18,7 +18,7 @@
       "mirror": "https://npm.taobao.org/mirrors/electron/"
     },
     "appId": "zerlda",
-    "productName": "海拉鲁大冒险",
+    "productName": "zerldamap",
     "copyright": "Copyright © 2019",
     "files": [
       "build/**/*",
