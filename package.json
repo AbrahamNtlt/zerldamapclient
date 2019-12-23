@@ -8,7 +8,8 @@
     "start": "webpack-dev-server",
     "build": "webpack --config webpack.config.js",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "release": "cross-env GH_TOKEN=6013d018a6be447d5f3c1807e3f55e403dc1e1b5 electron-builder"
   },
   "author": "Achieve",
   "license": "ISC",
@@ -27,6 +28,7 @@
       "static/**/*",
       "main.js"
     ],
+    "publish": ["github"],
     "extends": null,
     "mac": {
       "category": "public.app-category.productivity",
