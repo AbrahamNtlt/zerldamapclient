@@ -76,7 +76,7 @@
     "concurrently": "^5.0.2",
     "cross-env": "^6.0.3",
     "css-loader": "^3.4.0",
-    "electron": "^7.1.5",
+    "electron": "^11.5.0",
     "electron-builder": "^21.2.0",
     "electron-is-dev": "^1.1.0",
     "file-loader": "^5.0.2",
